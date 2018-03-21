@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+:root {
+    --background-login-button: #E0E0E0;
+    --facebook-color: #3F5C9A;
+    --google-color: #D73D32;
+}
+
+/*---Our general components---*/
+
+html{
+    font-family: 'Roboto';
+}
+
+body {
+    margin: 0;
+}
+
+.main-content {
+    width: 100vw;
+    height: 100vh;
+}
+
+.mat-mini-fab .mat-button-wrapper{
+    padding: 0 !important;
+}
+
+/*---End Our General Components---*/
+
+/*---Utilities---*/
+
+.flex {
+    display: flex;
+}
+
+.fully-centralized {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontally-centralized {
+    display: flex;
+    justify-content: center;
+}
+
+.vertically-centralized {
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/*---End Utilities---*/

@@ -1,0 +1,35 @@
+<div class="login-container flex">
+    <div class="login-left-side">
+    </div>
+    <div class="login-right-side" *ngIf="!showSignupView()">
+        <div class="login-account-label-content fully-centralized">
+            <label>FAZER LOGIN NA SUA CONTA</label>
+        </div>
+        <div class="login-account-form-content vertically-centralized column">
+            <div class="login-account-form-container column">
+                <mat-form-field>
+                    <input matInput placeholder="E-mail" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Senha" type="pass" required>
+                </mat-form-field>
+                <div class="remember-me-content">
+                    <mat-checkbox>Salvar</mat-checkbox>
+                </div>
+            </div>
+            <div class="social-login-container column vertically-centralized">
+                <button mat-button class="login-button">
+                    ENTRAR
+                </button>
+                <div class="fully-centralized">
+                    <label>--- OU ---</label>
+                </div>
+                <label>Não possui uma conta?</label>
+                <label class="login-account-label" (click)="toggleSignupView(true)">Criar uma conta</label>
+            </div>
+        </div>
+    </div>
+    <div class="login-right-side" *ngIf="showSignupView()">
+        <app-signup></app-signup>
+    </div>
+</div>
