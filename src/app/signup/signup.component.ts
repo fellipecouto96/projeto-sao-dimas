@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UtilsService } from '../shared/services/utils.service';
 import { User, UserObject } from '../shared/models/user.model';
 import { MatSnackBar } from '@angular/material';
+import { SignupBackendService } from './signup-backend.service';
 
 
 @Component({
@@ -12,7 +13,10 @@ import { MatSnackBar } from '@angular/material';
 export class SignupComponent implements OnInit {
     public user: User;
 
-    constructor(private _utilsService: UtilsService, private _snackBar: MatSnackBar) {
+    constructor(private _utilsService: UtilsService,
+        private _snackBar: MatSnackBar,
+        private _signupBackendService: SignupBackendService
+    ) {
         this.user = new UserObject;
     }
     ngOnInit() { }
@@ -21,7 +25,9 @@ export class SignupComponent implements OnInit {
         this._utilsService.toggleSignupView(option);
     }
 
-    public createNewAccount = () => {
+    public createAccount = () => {
+        console.log('user');
         console.log(this.user);
+        this._signupBackendService.createAccount(this.user).subscribe();
     }
 }

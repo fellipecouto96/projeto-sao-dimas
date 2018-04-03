@@ -4,11 +4,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+
 import { Routes, RouterModule } from '@angular/router';
 
 /*Services*/
 import { SharedDataService } from './shared/services/shared-data.service';
 import { UtilsService } from './shared/services/utils.service';
+import { HttpService } from './shared/services/http.service';
 
 /*Models*/
 import { User } from './shared/models/user.model';
@@ -54,6 +57,9 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { SignupComponent } from './signup/signup.component';
 
+import { LoginBackendService } from './login/login-backend.service';
+import { SignupBackendService } from './signup/signup-backend.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +71,7 @@ import { SignupComponent } from './signup/signup.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -101,6 +108,9 @@ import { SignupComponent } from './signup/signup.component';
     DragulaModule,
   ],
   providers: [
+    HttpService,
+    LoginBackendService,
+    SignupBackendService,
     SharedDataService,
     UtilsService
   ],

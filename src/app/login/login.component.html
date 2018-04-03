@@ -8,17 +8,17 @@
         <div class="login-account-form-content vertically-centralized column">
             <div class="login-account-form-container column">
                 <mat-form-field>
-                    <input matInput placeholder="E-mail" required>
+                    <input matInput [(ngModel)]="user.email" placeholder="E-mail" required>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="Senha" type="pass" required>
+                    <input matInput [(ngModel)]="user.password" placeholder="Senha" type="password" required>
                 </mat-form-field>
                 <div class="remember-me-content">
                     <mat-checkbox>Salvar</mat-checkbox>
                 </div>
             </div>
             <div class="social-login-container column vertically-centralized">
-                <button mat-button class="login-button">
+                <button mat-button class="login-button" (click)="doLogin()">
                     ENTRAR
                 </button>
                 <div class="fully-centralized">
