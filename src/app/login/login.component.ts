@@ -14,35 +14,29 @@ import { LoginBackendService } from './login-backend.service';
 })
 
 export class LoginComponent implements OnInit {
-    public user: User;
-
+    public userCredentials = {
+        email: '',
+        password: ''
+    };
     constructor(
         private _sharedDataService: SharedDataService,
         private _loginBackendService: LoginBackendService,
         private _utilsService: UtilsService
-
-    ) {
-        this.user = new UserObject;
-    }
+    ) { }
 
     ngOnInit() { }
 
     public doLogin(): void {
-        console.log('Email:');
-        console.log(this.user.email);
-        console.log('Password:');
-        console.log(this.user.password);
-        if (!this.user.password || !this.user.email) {
+        if (!this.userCredentials.password || !this.userCredentials.email) {
             console.log('invalid fields!');
         } else {
-            this._loginBackendService.doLogin(this.user)
+            this._loginBackendService.doLogin(this.userCredentials)
                 .subscribe(
                     result => {
-                        result.password = this.user.password;
-                        const sessionDate = new Date();
+                        alert('Logado com sucesso!');
                     },
                     error => {
-                        console.log('error bolado');
+                        console.log('error');
                     });
         }
     }
@@ -50,6 +44,7 @@ export class LoginComponent implements OnInit {
     public showSignupView = (): Boolean => {
         return this._sharedDataService.showSignup;
     }
+
     public toggleSignupView = (option: Boolean) => {
         this._utilsService.toggleSignupView(option);
     }

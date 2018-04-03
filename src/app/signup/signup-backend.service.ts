@@ -29,6 +29,7 @@ export class SignupBackendService {
 
     public createAccount = (user: User): Observable<any> => {
         const endpoint = `${this._longinusApiUrl}/users`;
+        console.log('endpoint' + endpoint);
         return this._http.post(endpoint, user)
             .do(data => console.log('Create new user: ', data))
             .catch(err => this._serverError(err));

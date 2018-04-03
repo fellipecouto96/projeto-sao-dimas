@@ -26,8 +26,12 @@ export class SignupComponent implements OnInit {
     }
 
     public createAccount = () => {
-        console.log('user');
-        console.log(this.user);
-        this._signupBackendService.createAccount(this.user).subscribe();
+        this._signupBackendService.createAccount(this.user).subscribe(
+            result => {
+                this._utilsService.toggleSignupView(false);
+            },
+            error => {
+                console.log('error bolado');
+            });
     }
 }

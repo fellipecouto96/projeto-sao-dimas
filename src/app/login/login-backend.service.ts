@@ -25,7 +25,7 @@ export class LoginBackendService {
     return Observable.throw(err || 'backend server error');
   }
 
-  doLogin = (userCredentials): Observable<User> => {
+  doLogin = (userCredentials): Observable<any> => {
     return this._sharedDataService.doLogin(userCredentials);
   }
 }

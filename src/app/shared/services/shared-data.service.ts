@@ -40,7 +40,7 @@ export class SharedDataService {
     }
 
     public doLogin = (userCredentials): Observable<any> => {
-        const endpoint = `${this._longinusApiUrl}users/`;
+        const endpoint = `${this._longinusApiUrl}/login`;
 
         return this._http.post(endpoint, userCredentials)
             .do(data => console.log('[SharedDataService.doLogin] server data: ', data))
