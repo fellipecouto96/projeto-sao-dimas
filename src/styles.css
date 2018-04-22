@@ -3,11 +3,16 @@
     --background-login-button: #E0E0E0;
     --facebook-color: #3F5C9A;
     --google-color: #D73D32;
+    --dimas-orange: #d35400;
+    --dimas-gray: #e1e1e1;
+    --dimas-dark-gray: #565856;
+    --dimas-black-top-sidenav: #383C48;
+    --dimas-light-black: #333333;
 }
 
 /*---Our general components---*/
 
-html{
+html {
     font-family: 'Roboto';
 }
 
@@ -20,11 +25,96 @@ body {
     height: 100vh;
 }
 
-.mat-mini-fab .mat-button-wrapper{
+.mat-mini-fab .mat-button-wrapper {
     padding: 0 !important;
 }
 
 /*---End Our General Components---*/
+
+/* --- Our Material Components style --- */
+
+* {
+    font-family: 'Roboto';
+    outline: none!important;
+}
+
+body {
+    margin: 0!important;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input {
+    outline: 0!important;
+}
+
+main {
+    height: 100vh;
+}
+
+menu {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.header-user-content span {
+    display: flex;
+    align-items: center;
+}
+
+mat-sidenav {
+    width: 250px;
+    box-shadow: 1px 0px 5px;
+    overflow: hidden;
+}
+
+.mat-form-field-ripple {
+    background-color: var(--dimas-orange)!important;
+}
+
+mat-expansion-panel {
+    background-color: transparent!important;
+    border: none!important;
+}
+
+.mat-expansion-indicator::after, .mat-expansion-panel-header-description {
+    color: white;
+}
+
+.mat-sort-header-button {
+    font-weight: 400!important;
+}
+
+.mat-dialog-container {
+    padding: 0!important;
+}
+
+/* End Our Material Components style --- */
+
+/* --- Components render position ---*/
+
+.main-content {
+    height: calc(100vh - 65px)!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.mat-drawer-container {
+    height: 100%;
+}
+
+.mat-drawer-content {
+    display: flex!important;
+    justify-content: center!important;
+    flex-direction: column!important;
+}
+
+/*End Components render position --- */
 
 /*---Utilities---*/
 

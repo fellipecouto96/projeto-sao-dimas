@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HeaderComponent } from './header/header.component';
 import { HttpModule } from '@angular/http';
 
 import { Routes, RouterModule } from '@angular/router';
@@ -17,7 +18,6 @@ import { HttpService } from './shared/services/http.service';
 import { User } from './shared/models/user.model';
 
 /*External libs*/
-import { DragulaModule } from 'ng2-dragula';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -40,6 +40,7 @@ import {
   MatRadioModule,
   MatRippleModule,
   MatSelectModule,
+  MatSidenavModule,
   MatSliderModule,
   MatSlideToggleModule,
   MatSnackBarModule,
@@ -53,18 +54,24 @@ import {
 
 /*Components*/
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { MenuComponent } from './menu/menu.component';
 import { SignupComponent } from './signup/signup.component';
 
+/*Services*/
 import { LoginBackendService } from './login/login-backend.service';
 import { SignupBackendService } from './signup/signup-backend.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    HomeComponent,
     LoginComponent,
     MainComponent,
+    MenuComponent,
     SignupComponent
   ],
   imports: [
@@ -93,8 +100,7 @@ import { SignupBackendService } from './signup/signup-backend.service';
     MatRadioModule,
     MatRippleModule,
     MatSelectModule,
-    // MatSidenavModule,
-    // MatSidenav,
+    MatSidenavModule,
     MatSliderModule,
     MatSlideToggleModule,
     MatSnackBarModule,
@@ -105,7 +111,6 @@ import { SignupBackendService } from './signup/signup-backend.service';
     MatTooltipModule,
     MatStepperModule,
     BrowserModule,
-    DragulaModule,
   ],
   providers: [
     HttpService,

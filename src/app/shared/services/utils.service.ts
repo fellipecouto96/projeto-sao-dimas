@@ -5,11 +5,12 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { SharedDataService } from '../services/shared-data.service';
-
+import { MatSidenav } from '@angular/material/sidenav';
 
 
 @Injectable()
 export class UtilsService {
+    public sidenav: any;
 
     private _snackBarErrors = {
         'internalError': 'Internal error ocurred.',
@@ -27,6 +28,18 @@ export class UtilsService {
     };
 
     constructor(private _sharedDataService: SharedDataService) {
+    }
+
+    public setSidenav = (sidenav: MatSidenav) => {
+        this.sidenav = sidenav;
+    }
+
+    public openSidenav = () => {
+        this.sidenav.open();
+    }
+
+    public closeSidenav = () => {
+        this.sidenav.close();
     }
 
     public toggleSignupView = (option: Boolean) => {
