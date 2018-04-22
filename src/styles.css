@@ -33,15 +33,6 @@ body {
 
 /* --- Our Material Components style --- */
 
-* {
-    font-family: 'Roboto';
-    outline: none!important;
-}
-
-body {
-    margin: 0!important;
-}
-
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
@@ -72,7 +63,7 @@ mat-sidenav {
 }
 
 .mat-form-field-ripple {
-    background-color: var(--dimas-orange)!important;
+    background-color: var(--voegol-orange)!important;
 }
 
 mat-expansion-panel {
@@ -93,28 +84,6 @@ mat-expansion-panel {
 }
 
 /* End Our Material Components style --- */
-
-/* --- Components render position ---*/
-
-.main-content {
-    height: calc(100vh - 65px)!important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow-y: hidden;
-}
-
-.mat-drawer-container {
-    height: 100%;
-}
-
-.mat-drawer-content {
-    display: flex!important;
-    justify-content: center!important;
-    flex-direction: column!important;
-}
-
-/*End Components render position --- */
 
 /*---Utilities---*/
 

@@ -54,6 +54,7 @@ import {
 
 /*Components*/
 import { AppComponent } from './app.component';
+import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
@@ -67,6 +68,7 @@ import { SignupBackendService } from './signup/signup-backend.service';
 @NgModule({
   declarations: [
     AppComponent,
+    EventsComponent,
     HeaderComponent,
     HomeComponent,
     LoginComponent,

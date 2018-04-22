@@ -7,7 +7,7 @@
                         <img src="../../assets/img/sidenav-logo.png">
                     </div>
                     <div class="sidenav-dimas vertically-centralized">
-                        dimas
+                        São-Dimas
                     </div>
                 </div>
                 <button mat-icon-button (click)="toggleSidenav()">
@@ -17,8 +17,8 @@
             <div class="sidenav-body">
                 <mat-list class="sidenav-options">
                     <div mat-subheader class="sidemenu-subheader">APLICAÇÕES</div>
-                    <mat-list-item>
-                        <i class="material-icons">dashboard</i>
+                    <mat-list-item (click)="redirect('events')">
+                        <i class="material-icons">Eventos</i>
                         <label>Dashboard</label>
                     </mat-list-item>
 
