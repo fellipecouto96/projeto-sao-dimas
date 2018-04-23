@@ -1,6 +1,6 @@
 <ng-container>
     <mat-sidenav-container class="example-container">
-        <mat-sidenav #sidenav opened="true" class="example-sidenav">
+        <mat-sidenav #sidenav opened="true">
             <div class="sidenav-header vertically-centralized">
                 <div class="sidenav-logo-and-name" style="padding: 0 16px;">
                     <div class="sidenav-logo-content">
@@ -61,12 +61,14 @@
             </div>
         </mat-sidenav>
 
-        <mat-sidenav-content style="height:100%">
-            <div class="main-content">
-                <router-outlet name="main">
-                </router-outlet>
-            </div>
+        <mat-sidenav-content>
             <app-header></app-header>
+            <div class="main-content">
+                <div class="main-container">
+                    <router-outlet name="main">
+                    </router-outlet>
+                </div>
+            </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </ng-container>

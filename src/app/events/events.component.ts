@@ -9,5 +9,7 @@ import { UtilsService } from '../shared/services/utils.service';
 })
 
 export class EventsComponent {
-  constructor(private _utilsService: UtilsService) {}
+  constructor(private _utilsService: UtilsService) {
+    console.log('Manja o constructor do events ae!');
+  }
 }

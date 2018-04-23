@@ -23,6 +23,14 @@ body {
 .main-content {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main-container{
+    width: 100vw;
+    height: calc(100vh - 65px);
 }
 
 .mat-mini-fab .mat-button-wrapper {
@@ -39,10 +47,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 input {
     outline: 0!important;
-}
-
-main {
-    height: 100vh;
 }
 
 menu {
@@ -63,7 +67,7 @@ mat-sidenav {
 }
 
 .mat-form-field-ripple {
-    background-color: var(--voegol-orange)!important;
+    background-color: var(--dimas-orange)!important;
 }
 
 mat-expansion-panel {
