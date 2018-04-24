@@ -59,7 +59,7 @@ import {
 /*Components*/
 import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
-import { DateTimePickerComponent } from './date-time-picker/date-time-picker.component';
+import { PrayersComponent } from './prayers/prayers.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
@@ -76,7 +76,7 @@ registerLocaleData(localePt, 'pt');
   declarations: [
     AppComponent,
     EventsComponent,
-    DateTimePickerComponent,
+    PrayersComponent,
     HeaderComponent,
     HomeComponent,
     LoginComponent,

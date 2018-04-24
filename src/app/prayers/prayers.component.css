@@ -1,0 +1,13 @@
+.new-prayer-container {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: 25px auto;
+    align-content: center;
+}
+
+.new-prayer-save-button {
+    width: 20%;
+    margin: 0 auto;
+}
+

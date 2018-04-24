@@ -20,7 +20,7 @@
         <div class="new-event-date-infos">
             <label class="new-event-description">Inserir novo evento</label>
             <div>
-                <input [matDatepicker]="myDatepicker" [value]="date.value">
+                <input [matDatepicker]="myDatepicker" [value]="date.value" [(ngModel)]="date.value">
                 <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
             </div>
             <mat-datepicker #myDatepicker></mat-datepicker>

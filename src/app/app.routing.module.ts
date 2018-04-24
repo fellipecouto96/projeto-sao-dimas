@@ -7,6 +7,7 @@ import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
+import { PrayersComponent } from './prayers/prayers.component';
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
         path: 'main', component: MainComponent,
         children: [
             { path: 'home', component: HomeComponent, outlet: 'main' },
-            { path: 'events', component: EventsComponent, outlet: 'main' }
+            { path: 'events', component: EventsComponent, outlet: 'main' },
+            { path: 'prayers', component: PrayersComponent, outlet: 'main' }
         ]
     }
 ];

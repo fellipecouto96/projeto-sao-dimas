@@ -52,7 +52,7 @@ export class SharedDataService {
 
         return this._http.get(endpoint)
             .do(data => console.log('[SharedDataService.getEvents] server data: ', data))
-            .catch(err => this._serverError(err, 'doLogin'));
+            .catch(err => this._serverError(err, 'getEvents'));
     }
 
     public saveEvent = (event): Observable<any> => {
@@ -60,6 +60,25 @@ export class SharedDataService {
 
         return this._http.post(endpoint, event)
             .do(data => console.log('[SharedDataService.saveEvents] server data: ', data))
-            .catch(err => this._serverError(err, 'doLogin'));
+            .catch(err => this._serverError(err, 'saveEvent'));
+    }
+
+    public getPrayers = (): Observable<any> => {
+        const endpoint = `${this._longinusApiUrl}/prayers`;
+
+        return this._http.get(endpoint)
+            .do(data => console.log('[SharedDataService.getPrayers] server data: ', data))
+            .map(response => {
+                return response.json().prayers;
+            })
+            .catch(err => this._serverError(err, 'getPrayers'));
+    }
+
+    public savePrayer = (prayer): Observable<any> => {
+        const endpoint = `${this._longinusApiUrl}/prayers`;
+
+        return this._http.post(endpoint, prayer)
+            .do(data => console.log('[SharedDataService.savePrayer] server data: ', data))
+            .catch(err => this._serverError(err, 'savePrayer'));
     }
 }

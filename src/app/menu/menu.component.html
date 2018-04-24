@@ -18,14 +18,19 @@
                 <mat-list class="sidenav-options">
                     <div mat-subheader class="sidemenu-subheader">APLICAÇÕES</div>
                     <mat-list-item (click)="redirect('events')">
-                        <i class="material-icons">Eventos</i>
-                        <label>Dashboard</label>
+                        <i class="material-icons">today</i>
+                        <label>Eventos</label>
                     </mat-list-item>
+
+                    <mat-list-item (click)="redirect('prayers')">
+                            <i class="material-icons">add_alert</i>
+                            <label>Orações</label>
+                        </mat-list-item>
 
                     <mat-expansion-panel class="mat-elevation-z0">
                         <mat-expansion-panel-header class="sidenav-expansive-list">
                             <mat-panel-title>
-                                <i class="material-icons">today</i>
+                                <i class="material-icons">person_outline</i>
                                 Dados pessoais
                             </mat-panel-title>
                         </mat-expansion-panel-header>

@@ -13,7 +13,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 
 
-export class MenuComponent implements OnInit, OnDestroy{
+export class MenuComponent implements OnInit, OnDestroy {
     @ViewChild('sidenav') public sidenav: MatSidenav;
     // options: FormGroup;
     mobileQuery: MediaQueryList;
@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit, OnDestroy{
     public redirect = (route: string): void => {
         this._router.navigate(['/main', {
             outlets: {
-                'main': ['events']
+                'main': [route]
             }
         }]);
         this._utilsService.closeSidenav();
