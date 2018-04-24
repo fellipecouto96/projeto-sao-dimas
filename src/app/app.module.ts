@@ -3,9 +3,11 @@ import { AppRoutingModule } from './app.routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { HttpModule } from '@angular/http';
+import localePt from '@angular/common/locales/pt';
 
 import { Routes, RouterModule } from '@angular/router';
 
@@ -18,6 +20,8 @@ import { HttpService } from './shared/services/http.service';
 import { User } from './shared/models/user.model';
 
 /*External libs*/
+import { CalendarModule } from 'angular-calendar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -55,6 +59,7 @@ import {
 /*Components*/
 import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
+import { DateTimePickerComponent } from './date-time-picker/date-time-picker.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
@@ -65,10 +70,13 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginBackendService } from './login/login-backend.service';
 import { SignupBackendService } from './signup/signup-backend.service';
 
+registerLocaleData(localePt, 'pt');
+
 @NgModule({
   declarations: [
     AppComponent,
     EventsComponent,
+    DateTimePickerComponent,
     HeaderComponent,
     HomeComponent,
     LoginComponent,
@@ -113,13 +121,16 @@ import { SignupBackendService } from './signup/signup-backend.service';
     MatTooltipModule,
     MatStepperModule,
     BrowserModule,
+    CalendarModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [
     HttpService,
     LoginBackendService,
     SignupBackendService,
     SharedDataService,
-    UtilsService
+    UtilsService,
+    { provide: LOCALE_ID, useValue: 'pt' }
   ],
   bootstrap: [AppComponent]
 })

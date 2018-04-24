@@ -15,7 +15,7 @@ const appRoutes: Routes = [
         path: 'main', component: MainComponent,
         children: [
             { path: 'home', component: HomeComponent, outlet: 'main' },
-            { path: 'events', component: HomeComponent, outlet: 'main' }
+            { path: 'events', component: EventsComponent, outlet: 'main' }
         ]
     }
 ];

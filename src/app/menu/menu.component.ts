@@ -13,7 +13,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 
 
-export class MenuComponent {
+export class MenuComponent implements OnInit, OnDestroy{
     @ViewChild('sidenav') public sidenav: MatSidenav;
     // options: FormGroup;
     mobileQuery: MediaQueryList;

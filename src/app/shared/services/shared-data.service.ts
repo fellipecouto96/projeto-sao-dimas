@@ -46,4 +46,20 @@ export class SharedDataService {
             .do(data => console.log('[SharedDataService.doLogin] server data: ', data))
             .catch(err => this._serverError(err, 'doLogin'));
     }
+
+    public getEvents = (): Observable<any> => {
+        const endpoint = `${this._longinusApiUrl}/events`;
+
+        return this._http.get(endpoint)
+            .do(data => console.log('[SharedDataService.getEvents] server data: ', data))
+            .catch(err => this._serverError(err, 'doLogin'));
+    }
+
+    public saveEvent = (event): Observable<any> => {
+        const endpoint = `${this._longinusApiUrl}/events`;
+
+        return this._http.post(endpoint, event)
+            .do(data => console.log('[SharedDataService.saveEvents] server data: ', data))
+            .catch(err => this._serverError(err, 'doLogin'));
+    }
 }
