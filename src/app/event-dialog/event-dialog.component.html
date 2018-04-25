@@ -1,0 +1,73 @@
+<mat-dialog-content class="goals-dialog-container">
+  <div class="goals-dialog-header fully-centralized">
+      <label>Nova</label>
+      <div class="dialog-header-image-container fully-centralized">
+          <!-- <img src="../../assets/img/lets-rock-dialog-igon.svg"> -->
+      </div>
+      <label>Meta</label>
+      <div class="close-dialog-button">
+          <button mat-fab class="fully-centralized" (click)="closeDialog()">
+              <mat-icon>close</mat-icon>
+          </button>
+      </div>
+  </div>
+  <div class="goals-dialog-body-container horizontally-centralized">
+      <div class="goals-dialog-body-content fully-centralized">
+          <div class="goals-dialog-body">
+              <div class="fully-centralized">
+                  <div class="fully-centralized">
+                      <div class="input-legend fully-centralized">
+                          <!-- <img src="../../assets/img/description-icon.svg"> -->
+                      </div>
+                  </div>
+                  <mat-input-container class="container-description">
+                      <input mdInput placeholder="DESCRIÇÃO" [(ngModel)]="selectedGoal.goal">
+                  </mat-input-container>
+              </div>
+              <div class="fully-centralized">
+                  <div class="fully-centralized">
+                      <div class="input-legend fully-centralized">
+                          <mat-datepicker-toggle mdSuffix [for]="picker"></mat-datepicker-toggle>
+                      </div>
+                  </div>
+                  <mat-input-container class="container-description">
+                      <input mdInput placeholder="DATA PARA CONCLUSÃO" [matDatepicker]="picker" [(ngModel)]="brDate" type="text">
+                      <mat-datepicker-toggle mdSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                  </mat-input-container>
+              </div>
+              <div class="fully-centralized">
+                  <div class="fully-centralized">
+                      <div class="input-legend fully-centralized">
+                          <img src="../../assets/img/select-status-icon.svg">
+                      </div>
+                  </div>
+                  <div class="container-description">
+                      <mat-select placeholder="STATUS" [(ngModel)]="goalStatus">
+                          <mat-option [value]=1>
+                              Em andamento
+                          </mat-option>
+                          <mat-option [value]=2>
+                              Não concluído
+                          </mat-option>
+                          <mat-option [value]=3>
+                              Concluído
+                          </mat-option>
+                      </mat-select>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="goals-dialog-footer">
+      <div mat-button class="goal-button" (click)="saveGoal()">
+          <!-- <img src="../../assets/img/save-goal-icon.svg"> -->
+          <label>SALVAR</label>
+      </div>
+      <div *ngIf="hasSelectedGoal()" mat-button class="goal-button" (click)="deleteGoal()">
+          <!-- <img src="../../assets/img/delete-goal-icon.svg"> -->
+          <label>EXCLUIR</label>
+      </div>
+  </div>
+</mat-dialog-content>
+<!-- <toaster-container [toasterconfig]="toasterconfig"></toaster-container> -->

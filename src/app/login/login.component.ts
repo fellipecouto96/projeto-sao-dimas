@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
     constructor(
         private _sharedDataService: SharedDataService,
         private _loginBackendService: LoginBackendService,
-        private _utilsService: UtilsService
+        private _utilsService: UtilsService,
+        private _router: Router
     ) { }
 
     ngOnInit() { }
@@ -33,7 +34,11 @@ export class LoginComponent implements OnInit {
             this._loginBackendService.doLogin(this.userCredentials)
                 .subscribe(
                     result => {
-                        alert('Logado com sucesso!');
+                        this._router.navigate(['/main', {
+                            outlets: {
+                                'main': ['home']
+                            }
+                        }]);
                     },
                     error => {
                         console.log('error');

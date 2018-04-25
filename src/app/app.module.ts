@@ -3,8 +3,11 @@ import { AppRoutingModule } from './app.routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import { HeaderComponent } from './header/header.component';
 import { HttpModule } from '@angular/http';
+import localePt from '@angular/common/locales/pt';
 
 import { Routes, RouterModule } from '@angular/router';
 
@@ -17,7 +20,8 @@ import { HttpService } from './shared/services/http.service';
 import { User } from './shared/models/user.model';
 
 /*External libs*/
-import { DragulaModule } from 'ng2-dragula';
+import { CalendarModule } from 'angular-calendar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -40,6 +44,7 @@ import {
   MatRadioModule,
   MatRippleModule,
   MatSelectModule,
+  MatSidenavModule,
   MatSliderModule,
   MatSlideToggleModule,
   MatSnackBarModule,
@@ -53,18 +58,30 @@ import {
 
 /*Components*/
 import { AppComponent } from './app.component';
+import { EventsComponent } from './events/events.component';
+import { PrayersComponent } from './prayers/prayers.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { MenuComponent } from './menu/menu.component';
 import { SignupComponent } from './signup/signup.component';
 
+/*Services*/
 import { LoginBackendService } from './login/login-backend.service';
 import { SignupBackendService } from './signup/signup-backend.service';
+
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
     AppComponent,
+    EventsComponent,
+    PrayersComponent,
+    HeaderComponent,
+    HomeComponent,
     LoginComponent,
     MainComponent,
+    MenuComponent,
     SignupComponent
   ],
   imports: [
@@ -93,8 +110,7 @@ import { SignupBackendService } from './signup/signup-backend.service';
     MatRadioModule,
     MatRippleModule,
     MatSelectModule,
-    // MatSidenavModule,
-    // MatSidenav,
+    MatSidenavModule,
     MatSliderModule,
     MatSlideToggleModule,
     MatSnackBarModule,
@@ -105,14 +121,16 @@ import { SignupBackendService } from './signup/signup-backend.service';
     MatTooltipModule,
     MatStepperModule,
     BrowserModule,
-    DragulaModule,
+    CalendarModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [
     HttpService,
     LoginBackendService,
     SignupBackendService,
     SharedDataService,
-    UtilsService
+    UtilsService,
+    { provide: LOCALE_ID, useValue: 'pt' }
   ],
   bootstrap: [AppComponent]
 })

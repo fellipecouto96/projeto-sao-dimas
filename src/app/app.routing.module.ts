@@ -3,18 +3,21 @@ import { ModuleWithProviders } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { HomeComponent } from './home/home.component';
+import { PrayersComponent } from './prayers/prayers.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
-    { path: 'main', component: MainComponent },
-
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
     {
         path: 'main', component: MainComponent,
         children: [
-            { path: 'login', component: LoginComponent, outlet: 'main' },
+            { path: 'home', component: HomeComponent, outlet: 'main' },
+            { path: 'events', component: EventsComponent, outlet: 'main' },
+            { path: 'prayers', component: PrayersComponent, outlet: 'main' }
         ]
     }
 ];
