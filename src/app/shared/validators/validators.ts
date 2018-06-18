@@ -1,5 +1,0 @@
-export * from './cpf.validator'
-export * from './cnpj.validator'
-export * from './phone.validator'
-export * from './no-whitespace.validator'
-export * from './email.validator'
