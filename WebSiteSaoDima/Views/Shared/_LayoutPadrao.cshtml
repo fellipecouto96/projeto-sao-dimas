@@ -1,6 +1,7 @@
 ﻿
 @{
     Layout = null;
+    WebSiteSaoDima.Models.Usuario usu =(WebSiteSaoDima.Models.Usuario)Session["Usuario"];
 }
 
 <!DOCTYPE html>
@@ -18,8 +19,89 @@
     <link href="~/Content/Site/Style_Site.css" rel="stylesheet" />
     <link href="~/Content/Site/MyCustom.css" rel="stylesheet" />
 
+
 </head>
 <body>
+    <div id="fb-root"></div>
+
+    <script>
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else {
+                // The person is not logged into your app or we are unable to tell.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+            }
+        }
+
+        // This function is called when someone finishes with the Login
+        // Button.  See the onlogin handler attached to it in the sample
+        // code below.
+        function checkLoginState() {
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '{your-app-id}',
+                cookie: true,  // enable cookies to allow the server to access
+                // the session
+                xfbml: true,  // parse social plugins on this page
+                version: 'v2.8' // use graph api version 2.8
+            });
+
+            // Now that we've initialized the JavaScript SDK, we call
+            // FB.getLoginStatus().  This function gets the state of the
+            // person visiting this page and can return one of three states to
+            // the callback you provide.  They can be:
+            //
+            // 1. Logged into your app ('connected')
+            // 2. Logged into Facebook, but not your app ('not_authorized')
+            // 3. Not logged into Facebook and can't tell if they are logged into
+            //    your app or not.
+            //
+            // These three cases are handled in the callback function.
+
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+
+        };
+
+        // Load the SDK asynchronously
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Here we run a very simple test of the Graph API after login is
+        // successful.  See statusChangeCallback() for when this call is made.
+        function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function (response) {
+                console.log('Successful login for: ' + response.name);
+                document.getElementById('status').innerHTML =
+                    'Thanks for logging in, ' + response.name + '!';
+            });
+        }
+    </script>
+
+
+
     <div style="max-width:100vw; overflow:hidden;">
         @*Linha Topo da Pagina*@
         <div id="bloco-super-desktop" class="row">
@@ -73,8 +155,8 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 hidden-sm hidden-xs col-sm-height col-md-height">
                                     <!-- Chamada Faço Parte -->
                                     <div class="faco-parte-header">
-                                        <a href="http://arquidiocesebh.org.br/venha-fazer-parte/faco-parte/" target="_blank">
-                                            <img src="~/Content/Img/santoImagem.png" class="ImagemTopDireito" title="São Pio V"/>
+                                        <a href="@Url.Action("Index","Home",new {area= "Santo" })" target="_blank">
+                                            <img src="~/Content/Img/santoImagem.png" class="ImagemTopDireito" title="São Pio V" />
                                         </a>
                                     </div>
                                     <!-- Chamada Faço Parte -->
@@ -92,12 +174,12 @@
         <div class="container-menu-geral hidden-xs hidden-sm bg1 hasLogo">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-lg-offset-8">
+                    <div class="col-md-18 col-lg-offset-3">
                         <nav id="faixa-menu-principal" class="hidden-sm hidden-xs">
                             <div id="menu-principal">
                                 <ul id="menu-menu-principal-1" class="navbar-nav nav">
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-75 dropdown">
-                                        <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Santuário</a>
+                                        <a href="Home" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Santuário</a>
                                         <ul role="menu" class=" dropdown-menu">
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/historia/">História</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/espaco/">Espaço</a></li>
@@ -183,15 +265,45 @@
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/contato/localizacao-e-como-chegar/">Localização</a></li>
                                         </ul>
                                     </li>
+                                    @if (usu == null)
+                                    {
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown" style="margin-left:5vw;">
+                                            <a href="@Url.Action("Login","Home")" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Entrar</a>
+                                            <ul role="menu" class=" dropdown-menu" style="width:200px;">
+                                                <form action="@Url.Action("Login","Home")" method="post">
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143" style="margin-bottom:2px;">
+                                                        <input type="email" placeholder="E-mail" name="email" style="width:100%" />
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                        <input type="password" placeholder="Senha" name="senha" />
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                                        <input type="submit" value="Entrar" class="btn btn-success" style="width:100%" />
+                                                    </li>
+                                                    <br />
+                                                    <div style="width:100%; border-bottom:1px solid white;"></div>
+                                                    <br />
 
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                        <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Entrar</a>
-                                    </li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                        <a href="@Url.Action("Cadastrar","Home")" class="btn btn-danger">Cadastrar</a>
+                                                    </li>
+
+                                                </form>
+                                            </ul>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown" style="margin-left:5vw;">
+                                        <span> Olá, @usu.nome </span>
+                                        </li>
+                                    }
+
 
                                 </ul>
                             </div>
                         </nav>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </div>

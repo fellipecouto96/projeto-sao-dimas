@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Trab_LabModelStoreContainer" CdmEntityContainer="Trab_LabEntities">
+    <EntitySetMapping Name="Evento">
+      <EntityTypeMapping TypeName="Trab_LabModel.Evento">
+        <MappingFragment StoreEntitySet="Evento">
+          <ScalarProperty Name="usuCriador" ColumnName="usuCriador" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="imagemEvento" ColumnName="imagemEvento" />
+          <ScalarProperty Name="tipoEvento" ColumnName="tipoEvento" />
+          <ScalarProperty Name="dataHora" ColumnName="dataHora" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEvento">
+      <EntityTypeMapping TypeName="Trab_LabModel.TipoEvento">
+        <MappingFragment StoreEntitySet="TipoEvento">
+          <ScalarProperty Name="requerAprovacao" ColumnName="requerAprovacao" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="Trab_LabModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="nomePai" ColumnName="nomePai" />
+          <ScalarProperty Name="nomeMae" ColumnName="nomeMae" />
+          <ScalarProperty Name="dataNascimento" ColumnName="dataNascimento" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
