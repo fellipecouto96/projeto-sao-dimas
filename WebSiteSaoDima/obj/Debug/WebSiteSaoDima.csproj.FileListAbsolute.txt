@@ -1,0 +1,76 @@
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\WebSiteSaoDima.dll.config
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\WebSiteSaoDima.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\WebSiteSaoDima.pdb
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Antlr3.Runtime.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Newtonsoft.Json.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Helpers.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Mvc.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Optimization.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Razor.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.Razor.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\WebGrease.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Helpers.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Mvc.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Optimization.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Razor.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.Razor.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Antlr3.Runtime.pdb
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Newtonsoft.Json.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.csprojResolveAssemblyReference.cache
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.dll
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.pdb
+C:\Users\Matheus\OneDrive\PUC_2018_1\Laboratório de Desenvolvimento de Sistemas\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.csproj.CopyComplete
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\WebSiteSaoDima.dll.config
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\WebSiteSaoDima.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\WebSiteSaoDima.pdb
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Antlr3.Runtime.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Microsoft.ApplicationInsights.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Microsoft.Web.Infrastructure.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Newtonsoft.Json.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Helpers.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Mvc.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Optimization.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Razor.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.Deployment.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.Razor.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\WebGrease.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Helpers.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Mvc.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Optimization.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.Razor.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.Deployment.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\System.Web.WebPages.Razor.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Antlr3.Runtime.pdb
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Newtonsoft.Json.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\Microsoft.ApplicationInsights.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.Helpers.resources.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.Mvc.resources.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.Optimization.resources.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.Razor.resources.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.WebPages.resources.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.csprojAssemblyReference.cache
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.csproj.CoreCompileInputs.cache
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.csproj.CopyComplete
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.dll
+D:\Web Site Paróquia São Dimas\WebSiteSaoDima\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.pdb

@@ -1,0 +1,18 @@
+﻿.imagemIcon{
+    height:50px;
+    width:50px;
+    border-radius:100%;
+}
+.backgroundAzul {
+    background-color: #0e7dc2;
+}
+
+.dropdown-menu {
+    background-color: #0e7dc2 !important;
+}
+.ImagemTopDireito {
+    border: 5px solid #ebebeb;
+    height: 120px;
+    margin: 1px 0 1px 0;
+    background-color:white;
+}
