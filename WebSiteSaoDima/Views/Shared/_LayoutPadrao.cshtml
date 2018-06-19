@@ -1,7 +1,6 @@
 ﻿
 @{
-    Layout = null;
-    WebSiteSaoDima.Models.Usuario usu =(WebSiteSaoDima.Models.Usuario)Session["Usuario"];
+    WebSiteSaoDima.Models.Usuario usu = (WebSiteSaoDima.Models.Usuario)Session["Usuario"];
 }
 
 <!DOCTYPE html>
@@ -138,14 +137,14 @@
                                 </div>
                                 <!-- Logo Topo -->
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 hidden-xs hidden-sm col-sm-height col-xs-height col-top">
-                                    <a href="Index" class="container-logo" style="height:125px; width:125px;">
+                                    <a href="@Url.Action("Index","Home")" class="container-logo" style="height:125px; width:125px;">
                                         <img src="~/Content/Img/Logo paroquia.jpg" alt="Paróquia São Dimas" style="height:80px;">
                                     </a>
                                 </div>
                                 <div class="col-xs-4 visible-xs"></div>
                                 <div class="col-md-14 col-sm-20 col-xs-16 col-xs-height col-sm-height col-top">
                                     <h1 id="logo">
-                                        <a href="Index">
+                                        <a href="@Url.Action("Index","Home")">
                                             <small>Paróquia São Dimas</small>
                                             <span class="cor1">São Dimas</span>
                                         </a>
@@ -174,108 +173,63 @@
         <div class="container-menu-geral hidden-xs hidden-sm bg1 hasLogo">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-18 col-lg-offset-3">
+                    <div class="col-md-19 col-lg-offset-3">
                         <nav id="faixa-menu-principal" class="hidden-sm hidden-xs">
                             <div id="menu-principal">
                                 <ul id="menu-menu-principal-1" class="navbar-nav nav">
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-75 dropdown">
-                                        <a href="Home" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Santuário</a>
+                                        <a data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Santuário</a>
                                         <ul role="menu" class=" dropdown-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/historia/">História</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/espaco/">Espaço</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/padroeiro/">Padroeiro</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/santa-rosa-de-lima/">Santa Rosa de Lima</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-padres menu-item-118"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/paroquia/padres/">Padres</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/oracoes/">Orações</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/secretaria/">Serviços</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-369"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/campanha-de-60-anos-2/">Campanha de Revitalização “Nos Passos de São Judas”</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/projetos-sociais/">Obras Sociais São Judas Tadeu</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/pastorais-e-movimentos/">Pastorais, movimentos e Comunidades</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-depoimentos menu-item-119"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/depoimentos/">Depoimentos</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/santuario/localizacao-e-como-chegar/">Localização</a></li>
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153"><a target="_blank" href="http://web.sistemas.pucminas.br/egp">Acesso EGP</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="@Url.Action("Historia","Home")">História</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="@Url.Action("Oracoes","Home")">Oracoes</a></li>
                                         </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-225 dropdown">
-                                        <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Para Você</a>
+                                        <a data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Para Você</a>
                                         <ul role="menu" class=" dropdown-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/missas-2/">Horários de Missa/ Agenda</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/pedido-de-missa/">Pedido de Missa</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-229"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/confissoes/">Reconciliação</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-227"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/batizados-2/">Batizados</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-226"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/1a-eucaristia/">1ª Eucaristia</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-230"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/crisma/">Crisma</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/casamentos-2/">Casamentos</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-371"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/uncao-dos-enfermos/">Unção dos enfermos</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-370"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/ordem/">Ordem</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-234"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/programacao/">Programação</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-eventos menu-item-235"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/eventos/">Eventos</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="@Url.Action("Index","Eventos")">Eventos</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="@Url.Action("Casamento","Home")">Casamentos</a></li>
                                         </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-236 dropdown">
-                                        <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Para sua fé</a>
+                                        <a  data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Para sua fé</a>
                                         <ul role="menu" class=" dropdown-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-239"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-sua-fe/sobre-a-arquidiocese/">A Arquidiocese de BH</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-sua-fe/arcebispo/">Arcebispo</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-238 dropdown-submenu">
-                                                <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-sua-fe/espiritualidade/">Espiritualidade</a>
+                                                <a>Espiritualidade</a>
                                                 <ul role="menu" class=" dropdown-menu">
-                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-133"><a target="_blank" href="http://arquidiocesebh.org.br/para-sua-fe/espiritualidade/artigo-de-dom-walmor/">Artigo de Dom Walmor</a></li>
-                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-240"><a target="_blank" href="http://arquidiocesebh.org.br/para-sua-fe/espiritualidade/catequese-do-papa-francisco/">Catequese do Papa Francisco</a></li>
                                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-241"><a target="_blank" href="http://arquidiocesebh.org.br/para-sua-fe/o-santo-do-dia/">Santo do Dia</a></li>
-                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-242"><a target="_blank" href="http://arquidiocesebh.org.br/para-sua-fe/espiritualidade/meu-dia-em-oracao/">Meu dia em Oração</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-vela-virtual menu-item-244"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-sua-fe/vela-virtual/">Vela virtual</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-para-compartilhar menu-item-245"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-compartilhar/">Para compartilhar</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-73 dropdown">
-                                        <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Quero ajudar</a>
-                                        <ul role="menu" class=" dropdown-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/quero-ajudar/seja-um-dizimista/">Seja um dizimista</a></li>
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-128"><a target="_blank" href="http://arquidiocesebh.org.br/venha-fazer-parte/faco-parte/">Faço Parte</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/quero-ajudar/voluntariado/">Voluntariado</a></li>
                                         </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-129 dropdown">
-                                        <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Notícias</a>
+                                        <a  data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Notícias</a>
                                         <ul role="menu" class=" dropdown-menu">
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-noticias menu-item-130"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/noticias/">Últimas Notícias</a></li>
+                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-noticias menu-item-130"><a href="@Url.Action("Noticias","Home")">Últimas Notícias</a></li>
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-132"><a target="_blank" href="http://arquidiocesebh.org.br/noticias/">Arquidiocese de BH</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-informativos menu-item-135"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/informativos/">Informativos</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-eventos menu-item-136"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/eventos/">Eventos</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-artigos menu-item-137"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/artigos/">Artigos</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-entrevistas menu-item-138"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/entrevistas/">Entrevistas</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-webtv menu-item-141"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/webtv/">Vídeos</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-fotos menu-item-152"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/fotos/">Fotos</a></li>
-                                            <li class="menu-item menu-item-type-post_type_archive menu-item-object-radio menu-item-151"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/radio/">Áudios</a></li>
                                         </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-142 dropdown">
-                                        <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Contato</a>
+                                        <a  data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Contato</a>
                                         <ul role="menu" class=" dropdown-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/contato/fale-conosco/">Fale conosco</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/quero-ajudar/seja-um-dizimista/">Seja um dizimista</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/contato/localizacao-e-como-chegar/">Localização</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="@Url.Action("FaleConosco","Home")">Fale conosco</a></li>
                                         </ul>
                                     </li>
                                     @if (usu == null)
                                     {
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown" style="margin-left:5vw;">
                                             <a href="@Url.Action("Login","Home")" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Entrar</a>
-                                            <ul role="menu" class=" dropdown-menu" style="width:200px;">
+                                            <ul role="menu" class=" dropdown-menu" style="width:400px; max-width:400px; padding:5px;">
                                                 <form action="@Url.Action("Login","Home")" method="post">
                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143" style="margin-bottom:2px;">
-                                                        <input type="email" placeholder="E-mail" name="email" style="width:100%" />
+                                                        <input type="email" placeholder="E-mail" name="email" style="width:100%; margin-bottom:5px;" />
                                                     </li>
                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                        <input type="password" placeholder="Senha" name="senha" />
+                                                        <input type="password" placeholder="Senha" name="senha" style="width:80%; margin-bottom:5px;" />
                                                     </li>
                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page ">
                                                         <input type="submit" value="Entrar" class="btn btn-success" style="width:100%" />
@@ -283,23 +237,22 @@
                                                     <br />
                                                     <div style="width:100%; border-bottom:1px solid white;"></div>
                                                     <br />
-
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                        <a href="@Url.Action("Cadastrar","Home")" class="btn btn-danger">Cadastrar</a>
-                                                    </li>
-
                                                 </form>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <button class="botao botao-danger"><a href="@Url.Action("Create","Usuarios")" style="text-decoration:none;">CADASTRAR </a> </button>
+                                                </li>
                                             </ul>
                                         </li>
                                     }
                                     else
                                     {
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown" style="margin-left:5vw;">
-                                        <span> Olá, @usu.nome </span>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children " style="margin-left:5vw;">
+                                            <div style="padding: 17px 11px 14px 11px;    font-family: Lato,sans-serif !important;    font-weight: 700;    font-size: 13px; color:white;">
+                                                <span class="dropdown-toggle" style="padding: 17px 11px 14px 11px;font-family: Lato,sans-serif !important;font-weight: 700;font-size: 13px; color:white;">Olá,</span><a href="@Url.Action("Edit","Usuarios", new { id = usu.id })" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">@usu.nome</a>
+                                                <a href="@Url.Action("Logout", "Home")" style="color:red;">Logout</a>
+                                            </div>
                                         </li>
                                     }
-
-
                                 </ul>
                             </div>
                         </nav>
@@ -334,7 +287,7 @@
                                             <img src="~/Content/Img/IconMissa.png" class="imagemIcon" />
                                         </span>
                                         <h3 class="cor1">Próxima Missa</h3>
-                                        <p class="ProximaMissa"><p><strong>Segunda-feira</strong> às 19h <br><strong>Santuário Arquidiocesano São Judas Tadeu</strong></p></p>
+                                        <p class="ProximaMissa"><p><strong>Segunda-feira</strong> às 19h <br><strong>Paróquia São Dimas</strong></p></p>
 
 
                                         <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/missas/" style="text-decoration: underline;">Ver todos os horários</a>

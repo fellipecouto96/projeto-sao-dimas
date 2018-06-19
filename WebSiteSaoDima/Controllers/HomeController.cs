@@ -33,12 +33,46 @@ namespace WebSiteSaoDima.Controllers
                 msg = "Bem vindo " + usu.nome + "!";
                 Session["Usuario"] = usu;
             }
-            return View();
+            return View("Index");
         }
+        
+        public ActionResult Logout()
+        {
+            Session["Usuario"] = null;
+
+            return View("Index");
+        }
+
         public ActionResult Cadastrar(Usuario usuario = null)
         {
-
+           
             return View();
         }
+
+        public ActionResult Historia()
+        {
+            return View();
+        }
+
+        public ActionResult Casamento()
+        {
+            return View();
+        }
+
+        public ActionResult FaleConosco()
+        {
+            return View();
+        }
+
+        public ActionResult Noticias()
+        {
+            return View();
+        }
+
+        public ActionResult Oracoes()
+        {
+            return View();
+        }
+
     }
 }

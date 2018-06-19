@@ -8,7 +8,7 @@
     <Property Name="nome" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="dataHora" Type="datetime" Nullable="false" />
     <Property Name="tipoEvento" Type="int" Nullable="false" />
-    <Property Name="imagemEvento" Type="image" />
+    <Property Name="imagemEvento" Type="varbinary(max)" />
     <Property Name="descricao" Type="text" />
     <Property Name="usuCriador" Type="int" Nullable="false" />
   </EntityType>
@@ -27,7 +27,7 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nome" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="cpf" Type="int" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="11" Nullable="false" />
     <Property Name="endereco" Type="varchar" MaxLength="200" />
     <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="senha" Type="varchar" MaxLength="50" Nullable="false" />

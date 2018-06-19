@@ -13,15 +13,22 @@
           <Property Name="nome" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="dataHora" Type="datetime" Nullable="false" />
           <Property Name="tipoEvento" Type="int" Nullable="false" />
-          <Property Name="imagemEvento" Type="image" />
+          <Property Name="imagemEvento" Type="varbinary(max)" />
           <Property Name="descricao" Type="text" />
-          <Property Name="usuCriador" Type="int" Nullable="false" />
+          <Property Name="usuCriador" Type="int" />
+        </EntityType>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="TipoEvento">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="descricao" Type="text" Nullable="false" />
           <Property Name="requerAprovacao" Type="bit" Nullable="false" />
@@ -32,13 +39,14 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nome" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="cpf" Type="int" Nullable="false" />
+          <Property Name="cpf" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="endereco" Type="varchar" MaxLength="200" />
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="senha" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="dataNascimento" Type="date" Nullable="false" />
           <Property Name="nomeMae" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="nomePai" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="perfil" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_Evento_TipoEvento">
           <End Role="TipoEvento" Type="Self.TipoEvento" Multiplicity="1" />
@@ -53,7 +61,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Evento_Usuario">
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Evento" Type="Self.Evento" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
@@ -64,8 +72,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Usuario_Perfil">
+          <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfil">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Trab_LabModelStoreContainer">
           <EntitySet Name="Evento" EntityType="Self.Evento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Perfil" EntityType="Self.Perfil" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoEvento" EntityType="Self.TipoEvento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Evento_TipoEvento" Association="Self.FK_Evento_TipoEvento">
@@ -76,6 +97,10 @@
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Evento" EntitySet="Evento" />
           </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Perfil" Association="Self.FK_Usuario_Perfil">
+            <End Role="Perfil" EntitySet="Perfil" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -83,6 +108,7 @@
       <Schema Namespace="Trab_LabModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="Trab_LabEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Evento" EntityType="Trab_LabModel.Evento" />
+          <EntitySet Name="Perfil" EntityType="Trab_LabModel.Perfil" />
           <EntitySet Name="TipoEvento" EntityType="Trab_LabModel.TipoEvento" />
           <EntitySet Name="Usuario" EntityType="Trab_LabModel.Usuario" />
           <AssociationSet Name="FK_Evento_TipoEvento" Association="Trab_LabModel.FK_Evento_TipoEvento">
@@ -92,6 +118,10 @@
           <AssociationSet Name="FK_Evento_Usuario" Association="Trab_LabModel.FK_Evento_Usuario">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Evento" EntitySet="Evento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Perfil" Association="Trab_LabModel.FK_Usuario_Perfil">
+            <End Role="Perfil" EntitySet="Perfil" />
+            <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Evento">
@@ -104,15 +134,23 @@
           <Property Name="tipoEvento" Type="Int32" Nullable="false" />
           <Property Name="imagemEvento" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="usuCriador" Type="Int32" Nullable="false" />
+          <Property Name="usuCriador" Type="Int32" />
           <NavigationProperty Name="TipoEvento1" Relationship="Trab_LabModel.FK_Evento_TipoEvento" FromRole="Evento" ToRole="TipoEvento" />
           <NavigationProperty Name="Usuario" Relationship="Trab_LabModel.FK_Evento_Usuario" FromRole="Evento" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuario" Relationship="Trab_LabModel.FK_Usuario_Perfil" FromRole="Perfil" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="TipoEvento">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="descricao" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="requerAprovacao" Type="Boolean" Nullable="false" />
@@ -124,14 +162,16 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nome" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="cpf" Type="Int32" Nullable="false" />
+          <Property Name="cpf" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="endereco" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="senha" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="dataNascimento" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="nomeMae" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="nomePai" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="perfil" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Evento" Relationship="Trab_LabModel.FK_Evento_Usuario" FromRole="Usuario" ToRole="Evento" />
+          <NavigationProperty Name="Perfil1" Relationship="Trab_LabModel.FK_Usuario_Perfil" FromRole="Usuario" ToRole="Perfil" />
         </EntityType>
         <Association Name="FK_Evento_TipoEvento">
           <End Type="Trab_LabModel.TipoEvento" Role="TipoEvento" Multiplicity="1" />
@@ -146,7 +186,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Evento_Usuario">
-          <End Type="Trab_LabModel.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="Trab_LabModel.Usuario" Role="Usuario" Multiplicity="0..1" />
           <End Type="Trab_LabModel.Evento" Role="Evento" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
@@ -157,7 +197,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <Association Name="FK_Usuario_Perfil">
+          <End Type="Trab_LabModel.Perfil" Role="Perfil" Multiplicity="1" />
+          <End Type="Trab_LabModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfil">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -176,6 +228,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Perfil">
+            <EntityTypeMapping TypeName="Trab_LabModel.Perfil">
+              <MappingFragment StoreEntitySet="Perfil">
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TipoEvento">
             <EntityTypeMapping TypeName="Trab_LabModel.TipoEvento">
               <MappingFragment StoreEntitySet="TipoEvento">
@@ -189,6 +249,7 @@
           <EntitySetMapping Name="Usuario">
             <EntityTypeMapping TypeName="Trab_LabModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="perfil" ColumnName="perfil" />
                 <ScalarProperty Name="nomePai" ColumnName="nomePai" />
                 <ScalarProperty Name="nomeMae" ColumnName="nomeMae" />
                 <ScalarProperty Name="dataNascimento" ColumnName="dataNascimento" />

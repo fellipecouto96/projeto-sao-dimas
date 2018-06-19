@@ -26,6 +26,7 @@ namespace WebSiteSaoDima.Models
         }
     
         public virtual DbSet<Evento> Evento { get; set; }
+        public virtual DbSet<Perfil> Perfil { get; set; }
         public virtual DbSet<TipoEvento> TipoEvento { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }

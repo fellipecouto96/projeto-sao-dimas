@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Trab_LabModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="Trab_LabEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Evento" EntityType="Trab_LabModel.Evento" />
     <EntitySet Name="TipoEvento" EntityType="Trab_LabModel.TipoEvento" />
     <EntitySet Name="Usuario" EntityType="Trab_LabModel.Usuario" />
+    <EntitySet Name="Evento" EntityType="Trab_LabModel.Evento" />
     <AssociationSet Name="FK_Evento_TipoEvento" Association="Trab_LabModel.FK_Evento_TipoEvento">
       <End Role="TipoEvento" EntitySet="TipoEvento" />
       <End Role="Evento" EntitySet="Evento" />
@@ -13,20 +13,6 @@
       <End Role="Evento" EntitySet="Evento" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Evento">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nome" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="dataHora" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="tipoEvento" Type="Int32" Nullable="false" />
-    <Property Name="imagemEvento" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="usuCriador" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="TipoEvento1" Relationship="Trab_LabModel.FK_Evento_TipoEvento" FromRole="Evento" ToRole="TipoEvento" />
-    <NavigationProperty Name="Usuario" Relationship="Trab_LabModel.FK_Evento_Usuario" FromRole="Evento" ToRole="Usuario" />
-  </EntityType>
   <EntityType Name="TipoEvento">
     <Key>
       <PropertyRef Name="id" />
@@ -43,7 +29,7 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nome" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="cpf" Type="Int32" Nullable="false" />
+    <Property Name="cpf" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
     <Property Name="endereco" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="senha" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -51,6 +37,20 @@
     <Property Name="nomeMae" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="nomePai" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Evento" Relationship="Trab_LabModel.FK_Evento_Usuario" FromRole="Usuario" ToRole="Evento" />
+  </EntityType>
+  <EntityType Name="Evento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="dataHora" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tipoEvento" Type="Int32" Nullable="false" />
+    <Property Name="imagemEvento" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="usuCriador" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TipoEvento1" Relationship="Trab_LabModel.FK_Evento_TipoEvento" FromRole="Evento" ToRole="TipoEvento" />
+    <NavigationProperty Name="Usuario" Relationship="Trab_LabModel.FK_Evento_Usuario" FromRole="Evento" ToRole="Usuario" />
   </EntityType>
   <Association Name="FK_Evento_TipoEvento">
     <End Type="Trab_LabModel.TipoEvento" Role="TipoEvento" Multiplicity="1" />

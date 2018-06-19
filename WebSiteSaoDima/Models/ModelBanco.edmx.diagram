@@ -5,11 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3135e4e160cd45dfac0ece62aedc1694" Name="Diagram1">
-        <EntityTypeShape EntityType="Trab_LabModel.Evento" Width="1.5" PointX="3" PointY="1.125" />
-        <EntityTypeShape EntityType="Trab_LabModel.TipoEvento" Width="1.5" PointX="0.75" PointY="5.5" />
-        <EntityTypeShape EntityType="Trab_LabModel.Usuario" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="Trab_LabModel.Evento" Width="1.5" PointX="5.25" PointY="1.25" />
+        <EntityTypeShape EntityType="Trab_LabModel.Perfil" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="Trab_LabModel.TipoEvento" Width="1.5" PointX="3" PointY="5.625" />
+        <EntityTypeShape EntityType="Trab_LabModel.Usuario" Width="1.5" PointX="3" PointY="1" />
         <AssociationConnector Association="Trab_LabModel.FK_Evento_TipoEvento" />
         <AssociationConnector Association="Trab_LabModel.FK_Evento_Usuario" />
+        <AssociationConnector Association="Trab_LabModel.FK_Usuario_Perfil" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebSiteSaoDima.Models.Evento>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
+    WebSiteSaoDima.Models.Usuario usu2 = (WebSiteSaoDima.Models.Usuario)Session["Usuario"];
+
+    IEnumerable <WebSiteSaoDima.Models.Evento> Eventos = Model.OrderBy(m => m.dataHora);
+}
+
+<div class="list-four list-default">
+    <div class="row">
+        @if (usu2 != null)
+        {
+            <div class="col-lg-12" style="margin-bottom:1px solid gray;">
+                <a href="@Url.Action("Create","Eventos")" class="btn btn-danger">Criar Evento</a>
+                <br />
+                <br />
+            </div>
+            <br />
+            <br />
+        }
+    </div>
+
+    <div class="row">
+
+
+        <ul class="reset">
+            @foreach (var item in Eventos)
+            {
+                <li class="col-md-6 col-sm-12">
+                    <div class="out-link-noticias">
+                        @{
+                            var base64 = Convert.ToBase64String(item.imagemEvento);
+                            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                        }
+                        <a>
+                            <div class="cover-noticias" style="background-image: url('@imgSrc');"></div>
+                        </a>
+                    </div> <!-- .out-link-noticias -->
+                    <div class="txt-list-default">
+                        <a class="cor0 cor1hover">
+                            <span class="data-relacionada">@item.dataHora</span>
+                            <h2>@item.nome</h2>
+                        </a>
+                    </div> <!-- .txt-list-default -->
+                </li>
+            }
+        </ul>
+    </div>
+</div>

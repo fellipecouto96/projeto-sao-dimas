@@ -1,0 +1,73 @@
+﻿@model WebSiteSaoDima.Models.Evento
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Evento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataHora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataHora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagemEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagemEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEvento1.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEvento1.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.nome)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

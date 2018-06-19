@@ -115,3 +115,4 @@ D:\Web Site Paróquia São Dimas\WebSiteSaoDimas_Git\projeto-sao-dimas\WebSiteSa
 D:\Web Site Paróquia São Dimas\WebSiteSaoDimas_Git\projeto-sao-dimas\WebSiteSaoDima\bin\EntityFramework.SqlServer.dll
 D:\Web Site Paróquia São Dimas\WebSiteSaoDimas_Git\projeto-sao-dimas\WebSiteSaoDima\bin\EntityFramework.xml
 D:\Web Site Paróquia São Dimas\WebSiteSaoDimas_Git\projeto-sao-dimas\WebSiteSaoDima\bin\EntityFramework.SqlServer.xml
+D:\Web Site Paróquia São Dimas\WebSiteSaoDimas_Git\projeto-sao-dimas\WebSiteSaoDima\obj\Debug\WebSiteSaoDima.csprojAssemblyReference.cache

@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Casamento";
+    Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
+    WebSiteSaoDima.Models.Usuario usu2 = (WebSiteSaoDima.Models.Usuario)Session["Usuario"];
+
+}
+
+<div class="inner-article">
+
+    <header class="top-page">
+        <div class="inner-header">
+            <div class="row">
+                <div class="row-md-height">
+                    <div class="col-lg-16 col-md-14 col-md-height col-md-middle">
+                        <h2 itemprop="name headline" class="cor1">Casamentos</h2>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .inner-header -->
+
+    </header>					<div class="entry-text">
+
+
+        <p>No Matrimônio, homem e mulher constituem uma comunhão íntima por toda a vida e celebram o amor esponsal de nosso Deus. Essa união foi elevada por Cristo Jesus à dignidade de sacramento, para o bem dos cônjuges e das famílias, pois é capaz de exprimir a entrega de Cristo na cruz pela humanidade (cf. Ef 5,32). A Sagrada Escritura, ao narrar a criação do homem e da mulher à imagem e semelhança de Deus, ao tomar como a união entre esposo e esposa como imagem da Aliança, e ao terminar com a visão das “núpcias do Cordeiro” (Ap 19, 9), revela a grandeza desse sacramento. Do princípio ao fim, a Escritura fala do Matrimônio e do seu “mistério”, da sua instituição e do sentido que Deus lhe deu, da sua origem e da sua finalidade, das suas diversas realizações ao longo da história da salvação, das suas dificuldades nascidas do pecado e da sua renovação “no Senhor” (1 Cor 7, 39), na Nova Aliança de Cristo com a Igreja.</p>
+        <p>Preparação para o Matrimônio: os noivos devem apresentar, na secretaria da igreja, a identidade e comprovante de endereço para a marcação da data, ao menos três meses antes. Conforme a procura, esse agendamento deve ser feito com maior antecedência ainda. É importante fazer contato telefônico prévio com a paróquia para se informar sobre detalhes do processo matrimonial, que envolve: o agendamento e apresentação dos documentos, os proclamas e a entrevista. Além do processo, exige-se a participação no encontro catequético pré-matrimonial.</p>
+        <hr>
+        <p>&nbsp;</p>
+
+
+
+
+
+        <div class="content-flex uma-coluna">
+            <h3>AGENDAMENTO DE CASAMENTOS NO SANTUÁRIO ARQUIDIOCESANO SÃO JUDAS TADEU</h3>
+            <br />
+            <br />
+
+            <div class="inner-article">
+                <div class="entry-text">
+                    <div role="form" class="wpcf7" id="wpcf7-f154-p29-o1" lang="pt-BR" dir="ltr">
+                        <div class="screen-reader-response"></div>
+                        <form action="/contato/fale-conosco/#wpcf7-f154-p29-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                            <div style="display: none;">
+                                <input type="hidden" name="_wpcf7" value="154">
+                                <input type="hidden" name="_wpcf7_version" value="5.0.2">
+                                <input type="hidden" name="_wpcf7_locale" value="pt_BR">
+                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f154-p29-o1">
+                                <input type="hidden" name="_wpcf7_container_post" value="29">
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-24">
+                                    <div class="form-group">
+                                        <label for="inputNome">Nome *</label>
+                                        <span class="wpcf7-form-control-wrap seu-nome"><input type="text" name="seu-nome" value="@(usu2!=null?usu2.nome:"")" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="inputNome" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-xs-24">
+                                    <div class="form-group">
+                                        <label for="inputTelefone">Telefone</label>
+                                        <span class="wpcf7-form-control-wrap seu-telefone"><input type="text" name="seu-telefone" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" id="inputTelefone" autocomplete="off" aria-invalid="false"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-24">
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email *</label>
+                                        <span class="wpcf7-form-control-wrap seu-email"><input type="email" name="seu-email" value="@(usu2!=null?usu2.email:"")" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="inputEmail" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-xs-24">
+                                    <div class="form-group">
+                                        <label for="inputEmail">Data/Hora *</label>
+                                        <span class="wpcf7-form-control-wrap seu-email"><input type="datetime" name="dataHora" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="dataHora" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-24">
+                                    <div class="form-group">
+                                        <label for="noiva">Noivo *</label>
+                                        <span class="wpcf7-form-control-wrap seu-email"><input type="text" name="Noivo" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="noivo" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-xs-24">
+                                    <div class="form-group">
+                                        <label for="noiva">Noiva *</label>
+                                        <span class="wpcf7-form-control-wrap seu-nome"><input type="text" name="noiva" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="noiva" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                <label for="inputMensagem">Mensagem *</label>
+                                <span class="wpcf7-form-control-wrap sua-mensagem"><textarea name="sua-mensagem" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control" id="inputMensagem" autocomplete="off" aria-required="true" aria-invalid="false"></textarea></span>
+                            </div>
+
+
+                            <input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit btn btn-warning btn-block btn-lg"><span class="ajax-loader"></span><div class="wpcf7-response-output wpcf7-display-none"></div>
+                        </form>
+                    </div>
+                </div> <!-- .entry-text -->
+            </div> <!-- .inner-article -->
+
+
+        </div>
+
+
+
+    </div> <!-- .entry-text -->
+</div>

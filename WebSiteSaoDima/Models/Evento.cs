@@ -20,7 +20,7 @@ namespace WebSiteSaoDima.Models
         public int tipoEvento { get; set; }
         public byte[] imagemEvento { get; set; }
         public string descricao { get; set; }
-        public int usuCriador { get; set; }
+        public Nullable<int> usuCriador { get; set; }
     
         public virtual TipoEvento TipoEvento1 { get; set; }
         public virtual Usuario Usuario { get; set; }

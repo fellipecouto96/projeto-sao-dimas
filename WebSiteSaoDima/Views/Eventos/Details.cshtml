@@ -1,0 +1,67 @@
+﻿@model WebSiteSaoDima.Models.Evento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Evento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataHora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataHora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagemEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagemEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEvento1.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEvento1.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

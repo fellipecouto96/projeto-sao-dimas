@@ -143,7 +143,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -164,6 +166,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelBanco.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Perfil.cs">
+      <DependentUpon>ModelBanco.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TipoEvento.cs">
       <DependentUpon>ModelBanco.tt</DependentUpon>
@@ -238,11 +243,25 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Shared\_LayoutPadrao.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Cadastrar.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Home\Historia.cshtml" />
+    <Content Include="Views\Home\Casamento.cshtml" />
+    <Content Include="Views\Home\FaleConosco.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Noticias.cshtml" />
+    <Content Include="Views\Eventos\Create.cshtml" />
+    <Content Include="Views\Eventos\Delete.cshtml" />
+    <Content Include="Views\Eventos\Details.cshtml" />
+    <Content Include="Views\Eventos\Edit.cshtml" />
+    <Content Include="Views\Eventos\Index.cshtml" />
+    <Content Include="Views\Home\Oracoes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

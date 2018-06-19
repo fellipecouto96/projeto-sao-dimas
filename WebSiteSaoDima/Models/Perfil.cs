@@ -12,27 +12,18 @@ namespace WebSiteSaoDima.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuario
+    public partial class Perfil
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Usuario()
+        public Perfil()
         {
-            this.Evento = new HashSet<Evento>();
+            this.Usuario = new HashSet<Usuario>();
         }
     
         public int id { get; set; }
         public string nome { get; set; }
-        public string cpf { get; set; }
-        public string endereco { get; set; }
-        public string email { get; set; }
-        public string senha { get; set; }
-        public System.DateTime dataNascimento { get; set; }
-        public string nomeMae { get; set; }
-        public string nomePai { get; set; }
-        public int perfil { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Evento> Evento { get; set; }
-        public virtual Perfil Perfil1 { get; set; }
+        public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }
