@@ -29,5 +29,7 @@ namespace WebSiteSaoDima.Models
         public virtual DbSet<Perfil> Perfil { get; set; }
         public virtual DbSet<TipoEvento> TipoEvento { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Casamento> Casamento { get; set; }
+        public virtual DbSet<Santo> Santo { get; set; }
     }
 }

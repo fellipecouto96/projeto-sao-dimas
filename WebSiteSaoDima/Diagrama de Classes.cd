@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WebSiteSaoDima.Controllers.CasamentoController">
+    <Position X="2.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACQRAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CasamentoController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Controllers.EventosController">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\EventosController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Controllers.HomeController">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABEAAAAAAAAQICAAAAAIAAAQAAAAAAAEQAAAABAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Controllers.SantoController">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\SantoController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Controllers.UsuariosController">
+    <Position X="8" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\UsuariosController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Models.Trab_LabEntities">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEACAAAAAAAAAQAAAAAAEgAAAAACAAAEAAAAAAA=</HashCode>
+      <FileName>Models\ModelBanco.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Models.Casamento">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAIAgABAAAAAAAAAACAAAAAQQAAAAAgA=</HashCode>
+      <FileName>Models\Casamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Models.Evento">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAAAIAAAAAAAAAQAAQAAgAAABAAAAAAAEAAAAAgA=</HashCode>
+      <FileName>Models\Evento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Models.Perfil">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAgA=</HashCode>
+      <FileName>Models\Perfil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Models.Santo">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\Santo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Models.TipoEvento">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAgAAAgA=</HashCode>
+      <FileName>Models\TipoEvento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSiteSaoDima.Models.Usuario">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAAAAAABAAAgAAAAIgAABgAAAAAAAIAQAAAAAgA=</HashCode>
+      <FileName>Models\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

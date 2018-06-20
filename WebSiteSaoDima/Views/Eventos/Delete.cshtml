@@ -5,9 +5,9 @@
     Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Excluir Evento</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza que deseja excluir este evento?</h3>
 <div>
     <h4>Evento</h4>
     <hr />
@@ -33,7 +33,11 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.imagemEvento)
+            @{
+                var base64 = Convert.ToBase64String(Model.imagemEvento);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            }
+            <div class="cover-noticias" style="background-image: url('@imgSrc');"></div>
         </dd>
 
         <dt>
@@ -66,8 +70,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
         </div>
     }
 </div>

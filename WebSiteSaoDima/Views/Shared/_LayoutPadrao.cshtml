@@ -118,6 +118,14 @@
                             <span>Santo do dia:</span><a href="http://arquidiocesebh.org.br/para-sua-fe/o-santo-do-dia/sao-pio-v/" target="_blank">São Pio V</a>
                         </nav>
 
+                        @if (usu != null && usu.perfil == 1)
+                        {
+                            <nav class="santo-dia">
+                                <a href="@Url.Action("Admin","Home")" target="_blank" style="color:red">ADM</a>
+                            </nav>
+                            /**/
+                        }
+
                     </div>
                 </div>
             </div>
@@ -194,7 +202,7 @@
                                     </li>
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-236 dropdown">
-                                        <a  data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Para sua fé</a>
+                                        <a data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Para sua fé</a>
                                         <ul role="menu" class=" dropdown-menu">
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-238 dropdown-submenu">
                                                 <a>Espiritualidade</a>
@@ -206,7 +214,7 @@
                                     </li>
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-129 dropdown">
-                                        <a  data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Notícias</a>
+                                        <a data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Notícias</a>
                                         <ul role="menu" class=" dropdown-menu">
                                             <li class="menu-item menu-item-type-post_type_archive menu-item-object-noticias menu-item-130"><a href="@Url.Action("Noticias","Home")">Últimas Notícias</a></li>
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-132"><a target="_blank" href="http://arquidiocesebh.org.br/noticias/">Arquidiocese de BH</a></li>
@@ -214,7 +222,7 @@
                                     </li>
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-142 dropdown">
-                                        <a  data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Contato</a>
+                                        <a data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Contato</a>
                                         <ul role="menu" class=" dropdown-menu">
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="@Url.Action("FaleConosco","Home")">Fale conosco</a></li>
                                         </ul>
@@ -290,7 +298,6 @@
                                         <p class="ProximaMissa"><p><strong>Segunda-feira</strong> às 19h <br><strong>Paróquia São Dimas</strong></p></p>
 
 
-                                        <a href="http://santuariosaojudastadeu.arquidiocesebh.org.br/para-voce/missas/" style="text-decoration: underline;">Ver todos os horários</a>
                                     </div>
                                 </div>
 

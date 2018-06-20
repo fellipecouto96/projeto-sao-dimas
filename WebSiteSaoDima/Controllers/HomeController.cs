@@ -13,6 +13,10 @@ namespace WebSiteSaoDima.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            List<Evento> evento = contexto.Evento.ToList();
+
+            ViewBag.Eventos = evento;
+
             return View();
         }
         public ActionResult Login(string email, string senha)
@@ -33,14 +37,14 @@ namespace WebSiteSaoDima.Controllers
                 msg = "Bem vindo " + usu.nome + "!";
                 Session["Usuario"] = usu;
             }
-            return View("Index");
+            return RedirectToAction("Index");
         }
         
         public ActionResult Logout()
         {
             Session["Usuario"] = null;
 
-            return View("Index");
+            return RedirectToAction("Index");
         }
 
         public ActionResult Cadastrar(Usuario usuario = null)
@@ -56,7 +60,8 @@ namespace WebSiteSaoDima.Controllers
 
         public ActionResult Casamento()
         {
-            return View();
+            
+            return View(contexto.Casamento.ToList());
         }
 
         public ActionResult FaleConosco()

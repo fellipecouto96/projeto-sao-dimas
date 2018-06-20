@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<WebSiteSaoDima.Models.Casamento>
+
 @{
     ViewBag.Title = "Casamento";
     Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
@@ -36,11 +37,86 @@
             <br />
             <br />
 
+            @if (usu2 != null && usu2.perfil == 1 && Model.Where(m=> m.aprovado == false).Count() > 0)
+            {
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.noivo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.noiva)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.data)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.solicitante)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.msg)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.telefone)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.aprovado)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model.Where(a => a.aprovado == false))
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.noivo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.noiva)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.data)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.solicitante)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.msg)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.telefone)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.aprovado)
+                            </td>
+                            <td>
+                                <form action="@Url.Action("Aprova","Casamento")" method="post">
+                                    <input type="hidden" name="id" value="@item.id" />
+                                    <input type="submit" value="Aprovar" />
+                                </form>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            }
+
+
+
+
+
             <div class="inner-article">
                 <div class="entry-text">
                     <div role="form" class="wpcf7" id="wpcf7-f154-p29-o1" lang="pt-BR" dir="ltr">
                         <div class="screen-reader-response"></div>
-                        <form action="/contato/fale-conosco/#wpcf7-f154-p29-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                        <form action="@Url.Action("Create","Casamento")" method="post" class="wpcf7-form" novalidate="novalidate">
                             <div style="display: none;">
                                 <input type="hidden" name="_wpcf7" value="154">
                                 <input type="hidden" name="_wpcf7_version" value="5.0.2">
@@ -51,15 +127,15 @@
                             <div class="row">
                                 <div class="col-sm-12 col-xs-24">
                                     <div class="form-group">
-                                        <label for="inputNome">Nome *</label>
-                                        <span class="wpcf7-form-control-wrap seu-nome"><input type="text" name="seu-nome" value="@(usu2!=null?usu2.nome:"")" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="inputNome" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                        <label for="solicitante">Nome *</label>
+                                        <span class="wpcf7-form-control-wrap seu-nome"><input type="text" name="solicitante" value="@(usu2!=null?usu2.nome:"")" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="solicitante" autocomplete="off" aria-required="true" aria-invalid="false"></span>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-xs-24">
                                     <div class="form-group">
-                                        <label for="inputTelefone">Telefone</label>
-                                        <span class="wpcf7-form-control-wrap seu-telefone"><input type="text" name="seu-telefone" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" id="inputTelefone" autocomplete="off" aria-invalid="false"></span>
+                                        <label for="telefone">Telefone</label>
+                                        <span class="wpcf7-form-control-wrap seu-telefone"><input type="number" name="telefone" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" id="telefone" autocomplete="off" aria-invalid="false"></span>
                                     </div>
                                 </div>
                             </div>
@@ -67,14 +143,14 @@
                             <div class="row">
                                 <div class="col-sm-12 col-xs-24">
                                     <div class="form-group">
-                                        <label for="inputEmail">Email *</label>
-                                        <span class="wpcf7-form-control-wrap seu-email"><input type="email" name="seu-email" value="@(usu2!=null?usu2.email:"")" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="inputEmail" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                        <label for="email">Email *</label>
+                                        <span class="wpcf7-form-control-wrap seu-email"><input type="email" name="email" value="@(usu2!=null?usu2.email:"")" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="email" autocomplete="off" aria-required="true" aria-invalid="false"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-xs-24">
                                     <div class="form-group">
-                                        <label for="inputEmail">Data/Hora *</label>
-                                        <span class="wpcf7-form-control-wrap seu-email"><input type="datetime" name="dataHora" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="dataHora" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                        <label for="data">Data *</label>
+                                        <span class="wpcf7-form-control-wrap seu-email"><input type="date" name="data" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="data" autocomplete="off" aria-required="true" aria-invalid="false"></span>
                                     </div>
                                 </div>
 
@@ -84,8 +160,8 @@
                             <div class="row">
                                 <div class="col-sm-12 col-xs-24">
                                     <div class="form-group">
-                                        <label for="noiva">Noivo *</label>
-                                        <span class="wpcf7-form-control-wrap seu-email"><input type="text" name="Noivo" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="noivo" autocomplete="off" aria-required="true" aria-invalid="false"></span>
+                                        <label for="noivo">Noivo *</label>
+                                        <span class="wpcf7-form-control-wrap seu-email"><input type="text" name="noivo" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" id="noivo" autocomplete="off" aria-required="true" aria-invalid="false"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-xs-24">
@@ -100,8 +176,8 @@
 
 
                             <div class="form-group">
-                                <label for="inputMensagem">Mensagem *</label>
-                                <span class="wpcf7-form-control-wrap sua-mensagem"><textarea name="sua-mensagem" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control" id="inputMensagem" autocomplete="off" aria-required="true" aria-invalid="false"></textarea></span>
+                                <label for="msg">Mensagem *</label>
+                                <span class="wpcf7-form-control-wrap sua-mensagem"><textarea name="msg" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control" id="msg" autocomplete="off" aria-required="true" aria-invalid="false"></textarea></span>
                             </div>
 
 

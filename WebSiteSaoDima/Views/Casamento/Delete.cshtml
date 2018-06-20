@@ -1,39 +1,39 @@
-﻿@model WebSiteSaoDima.Models.Usuario
+﻿@model WebSiteSaoDima.Models.Casamento
 
 @{
     ViewBag.Title = "Delete";
     Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
 }
 
-<h2>Excluir</h2>
+<h2>Delete</h2>
 
-<h3>Você tem certeza que deseja excluir este Usuario?</h3>
+<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Usuario</h4>
+    <h4>Casamento</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nome)
+            @Html.DisplayNameFor(model => model.noivo)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.nome)
+            @Html.DisplayFor(model => model.noivo)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.cpf)
+            @Html.DisplayNameFor(model => model.noiva)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.cpf)
+            @Html.DisplayFor(model => model.noiva)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.endereco)
+            @Html.DisplayNameFor(model => model.data)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.endereco)
+            @Html.DisplayFor(model => model.data)
         </dd>
 
         <dt>
@@ -45,35 +45,35 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.senha)
+            @Html.DisplayNameFor(model => model.solicitante)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.senha)
+            @Html.DisplayFor(model => model.solicitante)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.dataNascimento)
+            @Html.DisplayNameFor(model => model.msg)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.dataNascimento)
+            @Html.DisplayFor(model => model.msg)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nomeMae)
+            @Html.DisplayNameFor(model => model.telefone)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.nomeMae)
+            @Html.DisplayFor(model => model.telefone)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nomePai)
+            @Html.DisplayNameFor(model => model.aprovado)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.nomePai)
+            @Html.DisplayFor(model => model.aprovado)
         </dd>
 
     </dl>

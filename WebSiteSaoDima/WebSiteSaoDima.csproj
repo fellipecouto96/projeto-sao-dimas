@@ -143,11 +143,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CasamentoController.cs" />
     <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SantoController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Casamento.cs">
+      <DependentUpon>ModelBanco.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Evento.cs">
       <DependentUpon>ModelBanco.tt</DependentUpon>
@@ -168,6 +173,9 @@
       <DependentUpon>ModelBanco.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Perfil.cs">
+      <DependentUpon>ModelBanco.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Santo.cs">
       <DependentUpon>ModelBanco.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TipoEvento.cs">
@@ -222,6 +230,7 @@
     <Content Include="Models\ModelBanco.edmx.diagram">
       <DependentUpon>ModelBanco.edmx</DependentUpon>
     </Content>
+    <Content Include="Diagrama de Classes.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -262,6 +271,16 @@
     <Content Include="Views\Eventos\Edit.cshtml" />
     <Content Include="Views\Eventos\Index.cshtml" />
     <Content Include="Views\Home\Oracoes.cshtml" />
+    <Content Include="Views\Casamento\Create.cshtml" />
+    <Content Include="Views\Casamento\Delete.cshtml" />
+    <Content Include="Views\Casamento\Details.cshtml" />
+    <Content Include="Views\Casamento\Edit.cshtml" />
+    <Content Include="Views\Casamento\Index.cshtml" />
+    <Content Include="Views\Santo\Create.cshtml" />
+    <Content Include="Views\Santo\Delete.cshtml" />
+    <Content Include="Views\Santo\Details.cshtml" />
+    <Content Include="Views\Santo\Edit.cshtml" />
+    <Content Include="Views\Santo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

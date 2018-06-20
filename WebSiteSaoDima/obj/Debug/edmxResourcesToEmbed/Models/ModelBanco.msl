@@ -1,6 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Trab_LabModelStoreContainer" CdmEntityContainer="Trab_LabEntities">
+    <EntitySetMapping Name="Evento">
+      <EntityTypeMapping TypeName="Trab_LabModel.Evento">
+        <MappingFragment StoreEntitySet="Evento">
+          <ScalarProperty Name="usuCriador" ColumnName="usuCriador" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="imagemEvento" ColumnName="imagemEvento" />
+          <ScalarProperty Name="tipoEvento" ColumnName="tipoEvento" />
+          <ScalarProperty Name="dataHora" ColumnName="dataHora" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfil">
+      <EntityTypeMapping TypeName="Trab_LabModel.Perfil">
+        <MappingFragment StoreEntitySet="Perfil">
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TipoEvento">
       <EntityTypeMapping TypeName="Trab_LabModel.TipoEvento">
         <MappingFragment StoreEntitySet="TipoEvento">
@@ -14,6 +35,7 @@
     <EntitySetMapping Name="Usuario">
       <EntityTypeMapping TypeName="Trab_LabModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="perfil" ColumnName="perfil" />
           <ScalarProperty Name="nomePai" ColumnName="nomePai" />
           <ScalarProperty Name="nomeMae" ColumnName="nomeMae" />
           <ScalarProperty Name="dataNascimento" ColumnName="dataNascimento" />
@@ -26,14 +48,25 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Evento">
-      <EntityTypeMapping TypeName="Trab_LabModel.Evento">
-        <MappingFragment StoreEntitySet="Evento">
-          <ScalarProperty Name="usuCriador" ColumnName="usuCriador" />
-          <ScalarProperty Name="descricao" ColumnName="descricao" />
-          <ScalarProperty Name="imagemEvento" ColumnName="imagemEvento" />
-          <ScalarProperty Name="tipoEvento" ColumnName="tipoEvento" />
-          <ScalarProperty Name="dataHora" ColumnName="dataHora" />
+    <EntitySetMapping Name="Casamento">
+      <EntityTypeMapping TypeName="Trab_LabModel.Casamento">
+        <MappingFragment StoreEntitySet="Casamento">
+          <ScalarProperty Name="aprovado" ColumnName="aprovado" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="msg" ColumnName="msg" />
+          <ScalarProperty Name="solicitante" ColumnName="solicitante" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="noiva" ColumnName="noiva" />
+          <ScalarProperty Name="noivo" ColumnName="noivo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Santo">
+      <EntityTypeMapping TypeName="Trab_LabModel.Santo">
+        <MappingFragment StoreEntitySet="Santo">
+          <ScalarProperty Name="varb" ColumnName="varb" />
           <ScalarProperty Name="nome" ColumnName="nome" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>

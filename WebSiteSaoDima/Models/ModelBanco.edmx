@@ -5,6 +5,20 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Trab_LabModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Casamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noivo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="noiva" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="data" Type="date" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="solicitante" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="msg" Type="text" />
+          <Property Name="telefone" Type="varchar" MaxLength="50" />
+          <Property Name="aprovado" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Evento">
           <Key>
             <PropertyRef Name="id" />
@@ -23,6 +37,14 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Santo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="varb" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="TipoEvento">
           <Key>
@@ -85,8 +107,10 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Trab_LabModelStoreContainer">
+          <EntitySet Name="Casamento" EntityType="Self.Casamento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Evento" EntityType="Self.Evento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Perfil" EntityType="Self.Perfil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Santo" EntityType="Self.Santo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoEvento" EntityType="Self.TipoEvento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Evento_TipoEvento" Association="Self.FK_Evento_TipoEvento">
@@ -123,6 +147,8 @@
             <End Role="Perfil" EntitySet="Perfil" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
+          <EntitySet Name="Casamento" EntityType="Trab_LabModel.Casamento" />
+          <EntitySet Name="Santo" EntityType="Trab_LabModel.Santo" />
         </EntityContainer>
         <EntityType Name="Evento">
           <Key>
@@ -209,6 +235,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Casamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noivo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="noiva" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="solicitante" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="msg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="aprovado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Santo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="varb" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -257,6 +305,30 @@
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="endereco" ColumnName="endereco" />
                 <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Casamento">
+            <EntityTypeMapping TypeName="Trab_LabModel.Casamento">
+              <MappingFragment StoreEntitySet="Casamento">
+                <ScalarProperty Name="aprovado" ColumnName="aprovado" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="msg" ColumnName="msg" />
+                <ScalarProperty Name="solicitante" ColumnName="solicitante" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="noiva" ColumnName="noiva" />
+                <ScalarProperty Name="noivo" ColumnName="noivo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Santo">
+            <EntityTypeMapping TypeName="Trab_LabModel.Santo">
+              <MappingFragment StoreEntitySet="Santo">
+                <ScalarProperty Name="varb" ColumnName="varb" />
                 <ScalarProperty Name="nome" ColumnName="nome" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>

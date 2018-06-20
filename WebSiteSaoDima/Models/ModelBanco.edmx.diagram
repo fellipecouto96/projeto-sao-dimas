@@ -12,6 +12,8 @@
         <AssociationConnector Association="Trab_LabModel.FK_Evento_TipoEvento" />
         <AssociationConnector Association="Trab_LabModel.FK_Evento_Usuario" />
         <AssociationConnector Association="Trab_LabModel.FK_Usuario_Perfil" />
+        <EntityTypeShape EntityType="Trab_LabModel.Casamento" Width="1.5" PointX="7.625" PointY="3.5" />
+        <EntityTypeShape EntityType="Trab_LabModel.Santo" Width="1.5" PointX="7.625" PointY="1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

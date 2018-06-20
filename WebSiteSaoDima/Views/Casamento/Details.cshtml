@@ -1,0 +1,83 @@
+﻿@model WebSiteSaoDima.Models.Casamento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Casamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.noivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noiva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noiva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.solicitante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.solicitante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aprovado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aprovado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
