@@ -79,5 +79,9 @@ namespace WebSiteSaoDima.Controllers
             return View();
         }
 
+        public ActionResult Santos()
+        {
+            return View();
+        }
     }
 }

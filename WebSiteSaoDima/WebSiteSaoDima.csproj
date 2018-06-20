@@ -281,6 +281,7 @@
     <Content Include="Views\Santo\Details.cshtml" />
     <Content Include="Views\Santo\Edit.cshtml" />
     <Content Include="Views\Santo\Index.cshtml" />
+    <Content Include="Views\Home\Santos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
